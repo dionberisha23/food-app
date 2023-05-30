@@ -1,16 +1,23 @@
 const mongoose = require("mongoose");
 
 const schema = mongoose.Schema({
-  username: {
+  title: {
     type: String,
     required: [true, "name must not be empty"],
   },
-  email: {
+  description: {
     type: String,
     required: true,
     unique: true,
   },
-  password: {
+  image: {
+    type: String,
+  },
+  category: {
+    type: String,
+    required: true,
+  },
+  cook: {
     type: String,
     required: true,
   },
@@ -18,15 +25,8 @@ const schema = mongoose.Schema({
     type: Number,
     required: true,
   },
-  token: {
-    type: String,
-  },
-  role: {
-    type: String,
-    required: true,
-  },
 });
 
-const userModel = mongoose.model("users", schema);
+const foodModel = mongoose.model("food", schema);
 
-module.exports = userModel;
+module.exports = foodModel;
