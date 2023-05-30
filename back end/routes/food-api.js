@@ -25,6 +25,9 @@ router.post("/add-food", async (req, res) => {
   });
   await newFood.save();
   res.send("food added succesfully");
+  res.render("foodcards", {
+    food,
+  })
 });
 
 router.post("/get-food-category", async (req, res) => {
