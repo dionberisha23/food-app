@@ -5,6 +5,17 @@ const schema = mongoose.Schema({
     type: String,
     required: [true, "name must not be empty"],
   },
+  description: {
+    type: String,
+    required: true,
+  },
+  image: {
+    type: String,
+  },
+  category: {
+    type: String,
+    required: true,
+  },
   cook: {
     type: String,
     required: true,

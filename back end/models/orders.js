@@ -5,27 +5,34 @@ const schema = mongoose.Schema({
     type: String,
     required: [true, "name must not be empty"],
   },
-  description: {
+  date: {
     type: String,
     required: true,
   },
-  image: {
-    type: String,
+  cookPhone: {
+    type: Number,
   },
-  category: {
-    type: String,
+  driverPhone: {
+    type: Number,
+    required: true,
+  },
+  userPhone: {
+    type: Number,
     required: true,
   },
   cook: {
     type: String,
+  },
+  driver: {
+    type: String,
     required: true,
   },
-  phone: {
-    type: Number,
+  user: {
+    type: String,
     required: true,
   },
 });
 
-const foodModel = mongoose.model("food", schema);
+const orderModel = mongoose.model("orders", schema);
 
-module.exports = foodModel;
+module.exports = orderModel;

@@ -23,6 +23,9 @@ router.post("/favorites", async (req, res) => {
     if (getFood != null) {
       const setFavorite = new favoritesModel({
         title: title,
+        description: getFood.description,
+        image: getFood.image,
+        category: getFood.category,
         cook: getFood.cook,
         user: getUser.username,
       });
