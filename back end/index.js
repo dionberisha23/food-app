@@ -9,5 +9,5 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static("public"));
 
-app.use(api);
+app.use(api.router);
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
